@@ -1,0 +1,42 @@
+*{
+    margin: 5px;
+    box-sizing: content-box;
+}
+body {
+    height: 20vh;
+    background-color: rgb(0, 187, 255);
+    font-family:sans-serif;
+    text-align: center;
+    font-size: 15px;
+    flex-direction: column;
+}
+header{
+    border-style: solid;
+    border-color: brown;
+    background: rgb(129, 142, 144);
+    padding: 1em 0 1em 0 ;
+    font-size: 24px;
+}
+
+.Main{
+    border-style: solid;
+    border-color: brown;
+    background: rgb(180, 188, 188);
+    padding: 8em 0 8em 0 ;
+    flex: 5 5 150px;
+    font-size: 20px;
+    text-align: justify;
+
+}
+.whole{
+    display: flex;
+    flex: 1;
+}
+@media all and(max-width: 100px) {
+    .whole{
+        flex-direction: column;
+    }
+    .Main{
+        padding: 5em 0 5em 0 ;
+    }
+}

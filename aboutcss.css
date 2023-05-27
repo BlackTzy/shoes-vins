@@ -1,0 +1,24 @@
+*{
+    margin: 5px;
+    box-sizing: content-box;
+}
+body {
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+    font-family:sans-serif;
+    text-align: center;
+    font-size: 15px;
+    flex-direction: column;
+}
+header{
+    border-style: solid;
+    border-color: brown;
+    background: rgb(161, 161, 161);
+    padding: 1em 0 1em 0 ;
+    font-size: 24px;
+}
+Main{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}

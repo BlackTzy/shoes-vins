@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"2 dir="itr">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="center">
+        <h4>Login</h4>
+        <hr style="border-top:1px solid #000;"/>
+                        <br>
+        <form>
+            <div class="txt_field">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="firstname" placeholder="Username..">
+            </div>
+
+            <br>
+            <div class="txt_field">	
+                <label>Password :</label>
+                <input type="password" class="form-control" id="password" placeholder="Password.."/>
+            </div>
+            <center><button class="btn-primary" type="button" id="login" onclick="userLogin();">Login</button></center>
+            <br />
+            <center><button class="btn-primary" type="button" id="reset" onclick="resetAll();" style="display:none;">reset</button></center>
+        </form>
+    </div>
+</div>
+
+
+
+
+    <script type="text/javascript">
+        var attempt = 3; 
+         
+        function resetAll(){
+            attempt = 3;
+            document.getElementById("username").disabled=false;
+            document.getElementById("password").disabled=false;
+            document.getElementById("Login").disabled=false;
+            document.getElementById("reset").style.display="none";
+        }
+         
+        function userLogin(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+         
+            if(username=="" || password==""){
+                alert ("Please complete the required field!");
+            }else{
+                if (username == "admin" && password == "admin"){
+                    alert ("Login successfully");
+                    window.location.replace('homehtml.html');
+                    return false;
+                }else{
+                    attempt --;
+                    alert("Invalid username or password \r\nYou have left "+attempt+" attempt;");
+         
+                    if(attempt == 0){
+                        document.getElementById("username").disabled=true;
+                        document.getElementById("password").disabled=true;
+                        document.getElementById("login").disabled=true;
+                        document.getElementById("reset").style.display="inline";
+               
+                    }
+                }
+            }
+        }
+        </script>
+        
+
+
+</body>
+</html>
